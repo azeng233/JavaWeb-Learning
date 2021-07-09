@@ -1,11 +1,4 @@
-﻿该笔记大部分搬运B站==遇见狂神说==的javaWeb，顺便把图文合并记录，便于回顾
-视频地址：[https://www.bilibili.com/video/BV12J411M7Sj](https://www.bilibili.com/video/BV12J411M7Sj)   <font size="6" color="green">记得三连</font>
-
-[toc]
-
-
-
-## 1、基本概念
+﻿## 1、基本概念
 
 ### 1.1、前言
 web开发：
@@ -246,6 +239,7 @@ Https:安全的
 	Location：让网页重新定位；
 
  
+
 
 
 

@@ -1,127 +1,220 @@
-﻿## 1、基本概念
+# JavaWeb
+
+Java    Web
+
+## 1、基本概念
 
 ### 1.1、前言
+
 web开发：
-- web，网页的意思，www.baidu.com·
 
+- web，网页的意思  ， www.baidu.com
 - 静态web
-	- html,sss
-	- 提供给所有人看的数据始终不会发生变化！
+  - html，css
+  - 提供给所有人看的数据始终不会发生变化！
 - 动态web
-	- 淘宝，几乎是所有的网站；
-	- 提供给所有人看的数据始终会发生变化，每个人在不同的时间，不同的地点看到的信息各不相同！
-	- 技术栈：Servlet/ISP，ASP，PHP
+  - 淘宝，几乎是所有的网站；
+  - 提供给所有人看的数据始终会发生变化，每个人在不同的时间，不同的地点看到的信息各不相同！
+  - 技术栈：Servlet/JSP，ASP，PHP
 
- ### 1.2、web应用程序web应用程序：
- 可以提供浏览器访问的程序；
- + a.html、b.html.….多个web资源，这些web资源可以被外界访问，对外界提供服务；
-+ 你们能访问到的任何一个页面或者资源，都存在于这个世界的某一个角落的计算机上。
-+ URL
-+ 这个统一的web资源会被放在同一个文件夹下，web应用程序>Tomcat：服务器
-+ 一个web应用由多部分组成（静态web，动态web)
-	+ html,sss,is
-	+ jsp,servlet
-	+ Java程序
-	+ jar包
-	+ 配置文件（Properties)
+在Java中，动态web资源开发的技术统称为JavaWeb；
 
- Web酸用程序编写完毕后，若想提供给外界访问；需费一个服务蔬来统一管理
- ### 1.3、静态web
- - *.htm， *.html这些都是网员的后境、如果服务器上一直存在这些东四，我们就可以直接进行读取、需要网络；
- - ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200506174751665.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+### 1.2、web应用程序
+
+web应用程序：可以提供浏览器访问的程序；
+
+- a.html、b.html......多个web资源，这些web资源可以被外界访问，对外界提供服务；
+- 你们能访问到的任何一个页面或者资源，都存在于这个世界的某一个角落的计算机上。
+- URL 
+- 这个统一的web资源会被放在同一个文件夹下，web应用程序-->Tomcat：服务器
+- 一个web应用由多部分组成 （静态web，动态web）
+  - html，css，js
+  - jsp，servlet
+  - Java程序
+  - jar包
+  - 配置文件 （Properties）
+
+web应用程序编写完毕后，若想提供给外界访问：需要一个服务器来统一管理；
+
+### 1.3、静态web
+
+- *.htm, *.html,这些都是网页的后缀，如果服务器上一直存在这些东西，我们就可以直接进行读取。通络；
+
+![1567822802516](JavaWeb.assets/1567822802516.png)
 
 - 静态web存在的缺点
-	- Web页面无法动态更新，所有用户看到都是同一个页面
-		- 轮播图，点击特效：伪动态
-		- JavaScript[实际开发中，它用的最多]
-		- VBScript
-	- 它无法和数据库交互（数据无法持久化，用户无法交互）
-### 1.4、 动态web
-页面会动态展示，“web页面的展示效果因人而异”
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200506175025436.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
-  缺点：
+  - Web页面无法动态更新，所有用户看到都是同一个页面
+    - 轮播图，点击特效：伪动态
+    - JavaScript [实际开发中，它用的最多]
+    - VBScript
+  - 它无法和数据库交互（数据无法持久化，用户无法交互）
 
-- 加入服务器的动态web资源出现了错误，我们需要重新编写我们的后台程序，重新发布；
-	- 停机维护优点：
+
+
+### 1.4、动态web
+
+页面会动态展示： “Web的页面展示的效果因人而异”；
+
+![1567823191289](JavaWeb.assets/1567823191289.png)
+
+缺点：
+
+- 加入服务器的动态web资源出现了错误，我们需要重新编写我们的**后台程序**,重新发布；
+  - 停机维护
+
+优点：
+
 - Web页面可以动态更新，所有用户看到都不是同一个页面
-- 它可以与数据库交互（数据持久化：注册，商品信息，用户信息..……）
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200506175041602.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+- 它可以与数据库交互 （数据持久化：注册，商品信息，用户信息........）
+
+![1567823350584](JavaWeb.assets/1567823350584.png)
+
+新手村：--魔鬼训练（分析原理，看源码）--> PK场
+
+
+
 ## 2、web服务器
+
 ### 2.1、技术讲解
+
 **ASP:**
+
 - 微软：国内最早流行的就是ASP；
-- ·在HTML中嵌入了VB的脚本，ASP+COM；
-- ·在ASP开发中，基本一个页面都有几干行的业务代码，页面极其换乱
-- ·维护成本高！
-- C#
+
+- 在HTML中嵌入了VB的脚本，  ASP + COM；
+
+- 在ASP开发中，基本一个页面都有几千行的业务代码，页面极其换乱
+
+- 维护成本高！
+
+- C# 
+
 - IIS
 
-**php:**
-- PHP开发速度很快，功能很强大，跨平台，代码很简单（70%，WP）
-- ·无法承载大访问量的情况（局限性）
+  ```html
+  <h1>
+      <h1><h1>
+          <h1>
+              <h1>
+                  <h1>
+          <h1>
+              <%
+              System.out.println("hello")
+              %>
+              <h1>
+                  <h1>
+     <h1><h1>
+  <h1>
+  ```
 
- **jSP/Servlet:**
-    B/S；浏览和服务器C/S：客户端和服务器
+  
+
+**php：**
+
+- PHP开发速度很快，功能很强大，跨平台，代码很简单 （70% , WP）
+- 无法承载大访问量的情况（局限性）
+
+
+
+**JSP/Servlet : ** 
+
+B/S：浏览和服务器
+
+C/S:  客户端和服务器
+
 - sun公司主推的B/S架构
-- 基于Java语言的（所有的大公司，或者一些开源的组件，都是用Java写的）
+- 基于Java语言的 (所有的大公司，或者一些开源的组件，都是用Java写的)
 - 可以承载三高问题带来的影响；
-- 语法像ASP，ASP->JSP，加强市场强度；
+- 语法像ASP ， ASP-->JSP , 加强市场强度；
+
+
+
+.....
+
+
 
 ### 2.2、web服务器
+
 服务器是一种被动的操作，用来处理用户的一些请求和给用户一些响应信息；
-**lIS**
-微软的；ASP.,Windows中自带的
+
+
+
+**IIS**
+
+微软的； ASP...,Windows中自带的
+
 **Tomcat**
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200423183331323.png)
- 面向百度编程：
- Tomcat是Apache 软件基金会（Apache Software Foundation)的jakarta项目中的一个核心项目，最新的Servlet 和ISP 规范总是能在Tomcat中得到体现，因为Tomcat 技术先进、性能稳定，而且免费，因而深受lava爱好者的喜爱并得到了部分软件开发商的认可，成为目前比较流行的Web应用服务器。
+![1567824446428](JavaWeb.assets/1567824446428.png)
 
-Tomcat 服务器是一个免费的开放源代码的Web应用服务器，属于轻量级应用服务器，在中小型系统和并发访问用户不是很多的场合下被普遍使用，是开发和调试ISP程序的首选。对于一个Java初学web的人来说，它是最佳的选择
+面向百度编程；
 
-Tomcat 实际上运行JSP页面和Serlet。Tornct最新版易9.0
+Tomcat是Apache 软件基金会（Apache Software Foundation）的Jakarta 项目中的一个核心项目，最新的Servlet 和JSP 规范总是能在Tomcat 中得到体现，因为Tomcat 技术先进、性能稳定，而且**免费**，因而深受Java 爱好者的喜爱并得到了部分软件开发商的认可，成为目前比较流行的Web 应用服务器。
+
+Tomcat 服务器是一个免费的开放源代码的Web 应用服务器，属于轻量级应用[服务器](https://baike.baidu.com/item/服务器)，在中小型系统和并发访问用户不是很多的场合下被普遍使用，是开发和调试JSP 程序的首选。对于一个Java初学web的人来说，它是最佳的选择
+
+Tomcat 实际上运行JSP 页面和Servlet。Tomcat最新版本为**9.0。**
+
+....
 
 **工作3-5年之后，可以尝试手写Tomcat服务器；**
 
 下载tomcat：
-1. 安装or解压
+
+1. 安装 or  解压
 2. 了解配置文件及目录结构
 3. 这个东西的作用
 
-## 3、Tomcat 
-### 3.1安装tomcat tomcat
-官网：[http://tomcat.apache.org/](http://tomcat.apache.org/)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200423183805916.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200423183826267.png)
+
+## 3、Tomcat
+
+### 3.1、 安装tomcat
+
+tomcat官网：http://tomcat.apache.org/
+
+![1567825600842](JavaWeb.assets/1567825600842.png)
+
+![1567825627138](JavaWeb.assets/1567825627138.png)
+
+
+
 ### 3.2、Tomcat启动和配置
-文件夹作用:
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200506175503686.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
 
-![](https://img-blog.csdnimg.cn/20200423184021633.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
-访问测试：[http://localhost:8080/](http://localhost:8080/)
+文件夹作用：
+
+![1567825763180](JavaWeb.assets/1567825763180.png)
+
+**启动。关闭Tomcat**
+
+![1567825840657](JavaWeb.assets/1567825840657.png)
+
+访问测试：http://localhost:8080/
+
 可能遇到的问题：
+
 1. Java环境变量没有配置
 2. 闪退问题：需要配置兼容性
 3. 乱码问题：配置文件中设置
 
-可以修改 conf/logging.properties 中的 java.util.logging.ConsoleHandler.encoding = GBK **解决乱码问题**
 ### 3.3、配置
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200506175624200.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+
+![1567825967256](JavaWeb.assets/1567825967256.png)
 
 可以配置启动的端口号
-- tomcat的默认端口号为：8080 
-- mysql:3306
-- http:80 
-- https：443 
+
+- tomcat的默认端口号为：8080
+- mysql：3306
+- http：80
+- https：443
 
 ```xml
 <Connector port="8081" protocol="HTTP/1.1"
-      connectionTimeout="20000"
-      redirectPort="8443" />
+           connectionTimeout="20000"
+           redirectPort="8443" />
 ```
-
 可以配置主机的名称
+
 - 默认的主机名为：localhost->127.0.0.1
 - 默认网站应用存放的位置为：webapps
 
@@ -129,161 +222,237 @@ Tomcat 实际上运行JSP页面和Serlet。Tornct最新版易9.0
   <Host name="www.qinjiang.com"  appBase="webapps"
         unpackWARs="true" autoDeploy="true">
 ```
-高难度面试题：
+#### 高难度面试题：
+
 请你谈谈网站是如何进行访问的！
+
 1. 输入一个域名；回车
-2. 检查本机的C:\Windows\System32\drivers\etc\hosts配置文件下有没有这个域名映射；
-	 1. 有：直接返回对应的ip地址，这个地址中，有我们需要访问的web程序，可以直接访问
-	
 
-		```php
-		 127.0.0.1 www.qinjiang.com
-		```
-	 3. 没有：去DNS服务器找，找到的话就返回，找不到就返回找不到；
-	 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200423184922156.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+2. 检查本机的 C:\Windows\System32\drivers\etc\hosts配置文件下有没有这个域名映射；
 
-4.可以配置一下环境变量（可选性）
+   1. 有：直接返回对应的ip地址，这个地址中，有我们需要访问的web程序，可以直接访问
+
+      ```java
+      127.0.0.1       www.qinjiang.com
+      ```
+
+   2. 没有：去DNS服务器找，找到的话就返回，找不到就返回找不到；
+
+   ![1567827057913](JavaWeb.assets/1567827057913.png)
+
+4. 可以配置一下环境变量（可选性）
+
 ### 3.4、发布一个web网站
+
 不会就先模仿
-- 将自己写的网站，放到服务器（Tomcat)中指定的web应用的文件夹（webapps)下，就可以访问了
+
+- 将自己写的网站，放到服务器(Tomcat)中指定的web应用的文件夹（webapps）下，就可以访问了
 
 网站应该有的结构
 
+```java
+--webapps ：Tomcat服务器的web目录
+	-ROOT
+	-kuangstudy ：网站的目录名
+		- WEB-INF
+			-classes : java程序
+			-lib：web应用所依赖的jar包
+			-web.xml ：网站配置文件
+		- index.html 默认的首页
+		- static 
+            -css
+            	-style.css
+            -js
+            -img
+         -.....
+```
 
-	--webapps ：Tomcat服务器的web目录
-		-ROOT
-		-kuangstudy ：网站的目录名
-			- WEB-INF
-				-classes : java程序
-				-lib：web应用所依赖的jar包
-				-web.xml ：网站配置文件
-			- index.html 默认的首页
-			- static 
-	            -css
-	            	-style.css
-	            -js
-	            -img
-	         -.....
 
-HTTP协议：面试 
-Maven:构建工具 
- - Maven安装包 
 
-Servlet入门
-- HelloWorld!
-- Servlet配置 ·原理
+HTTP协议 ： 面试
+
+Maven：构建工具
+
+- Maven安装包
+
+Servlet 入门
+
+- HelloWorld！
+- Servlet配置
+- 原理
+
+
+
 ## 4、Http
-### 4.1、什么是HTTPHTTP
-(超文本传输协议）是一个简单的请求-响应协议，它通常运行在TCP之上。
-- 文本：html，字符串，…
-- 超文本：图片，音乐，视频，定位，地图.……
-- 端口:80
 
-Https:安全的
+### 4.1、什么是HTTP
+
+HTTP（超文本传输协议）是一个简单的请求-响应协议，它通常运行在TCP之上。
+
+- 文本：html，字符串，~ ….
+- 超文本：图片，音乐，视频，定位，地图…….
+- 80
+
+Https：安全的
+
+- 443
 
 ### 4.2、两个时代
+
 - http1.0
-	- HTTP/1.0：客户端可以与web服务器连接后，只能获得一个web资源，断开连接
+
+  - HTTP/1.0：客户端可以与web服务器连接后，只能获得一个web资源，断开连接
+
 - http2.0
-	- HTTP/1.1：客户端可以与web服务器连接后，可以获得多个web资源。
+
+  - HTTP/1.1：客户端可以与web服务器连接后，可以获得多个web资源。‘
+
+  
+
 ### 4.3、Http请求
-- 客户端--发请求（Request）--服务器
+
+- 客户端---发请求（Request）---服务器
 
 百度：
 
-	Request URL:https://www.baidu.com/   请求地址
-	Request Method:GET    get方法/post方法
-	Status Code:200 OK    状态码：200
-	Remote（远程） Address:14.215.177.39:443
-	
-	Accept:text/html  
-	Accept-Encoding:gzip, deflate, br
-	Accept-Language:zh-CN,zh;q=0.9    语言
-	Cache-Control:max-age=0
-	Connection:keep-alive
+```java
+Request URL:https://www.baidu.com/   请求地址
+Request Method:GET    get方法/post方法
+Status Code:200 OK    状态码：200
+Remote（远程） Address:14.215.177.39:443
+```
+
+```java
+Accept:text/html  
+Accept-Encoding:gzip, deflate, br
+Accept-Language:zh-CN,zh;q=0.9    语言
+Cache-Control:max-age=0
+Connection:keep-alive
+```
+
 #### 1、请求行
+
 - 请求行中的请求方式：GET
-- 请求方式：Get,Post,HEAD,DELETE,PUT,TRACT.…
-	- get：请求能够携带的参数比较少，大小有限制，会在浏览器的URL地址栏显示数据内容，不安全，但高效
-	- post:请求能够携带的参数没有限制，大小没有限制，不会在浏览器的URL地址栏显示数据内容，安全，但不高效。
+- 请求方式：**Get，Post**，HEAD,DELETE,PUT,TRACT…
+  - get：请求能够携带的参数比较少，大小有限制，会在浏览器的URL地址栏显示数据内容，不安全，但高效
+  - post：请求能够携带的参数没有限制，大小没有限制，不会在浏览器的URL地址栏显示数据内容，安全，但不高效。
 
 #### 2、消息头
 
-	Accept：告诉浏览器，它所支持的数据类型
-	Accept-Encoding：支持哪种编码格式  GBK   UTF-8   GB2312  ISO8859-1
-	Accept-Language：告诉浏览器，它的语言环境
-	Cache-Control：缓存控制
-	Connection：告诉浏览器，请求完成是断开还是保持连接
-	HOST：主机..../.
+```java
+Accept：告诉浏览器，它所支持的数据类型
+Accept-Encoding：支持哪种编码格式  GBK   UTF-8   GB2312  ISO8859-1
+Accept-Language：告诉浏览器，它的语言环境
+Cache-Control：缓存控制
+Connection：告诉浏览器，请求完成是断开还是保持连接
+HOST：主机..../.
+```
 
 ### 4.4、Http响应
-- 服务器--响应…….客户端
 
- 百度：
+- 服务器---响应-----客户端
 
-	Cache-Control:private    缓存控制
-	Connection:Keep-Alive    连接
-	Content-Encoding:gzip    编码
-	Content-Type:text/html   类型  
+百度：
 
-#### 1、响应体
+```java
+Cache-Control:private    缓存控制
+Connection:Keep-Alive    连接
+Content-Encoding:gzip    编码
+Content-Type:text/html   类型
+```
+
+#### 1.响应体
+
+```java
+Accept：告诉浏览器，它所支持的数据类型
+Accept-Encoding：支持哪种编码格式  GBK   UTF-8   GB2312  ISO8859-1
+Accept-Language：告诉浏览器，它的语言环境
+Cache-Control：缓存控制
+Connection：告诉浏览器，请求完成是断开还是保持连接
+HOST：主机..../.
+Refresh：告诉客户端，多久刷新一次；
+Location：让网页重新定位；
+```
+
+#### 2、响应状态码 
+
+200：请求响应成功  200
+
+3xx：请求重定向 
+
+- 重定向：你重新到我给你新位置去；
+
+4xx：找不到资源   404
+
+- 资源不存在；
+
+5xx：服务器代码错误   500       502:网关错误
 
 
-	Accept：告诉浏览器，它所支持的数据类型
-	Accept-Encoding：支持哪种编码格式  GBK   UTF-8   GB2312  ISO8859-1
-	Accept-Language：告诉浏览器，它的语言环境
-	Cache-Control：缓存控制
-	Connection：告诉浏览器，请求完成是断开还是保持连接
-	HOST：主机..../.
-	Refresh：告诉客户端，多久刷新一次；
-	Location：让网页重新定位；
-
- 
-
-
-
-
-
-#### 2、响应状态码
-200：请求响应成功200
-3xx:请求重定向·重定向：你重新到我给你新位置去；
-4xx:找不到资源404·资源不存在；
-5xx:服务器代码错误 500  502:网关错误
 
 **常见面试题：**
+
 当你的浏览器中地址栏输入地址并回车的一瞬间到页面能够展示回来，经历了什么？
 
-## 5、Maven
- **我为什么要学习这个技术？**
-1. 在Javaweb开发中，需要使用大量的jar包，我们手动去导入；
-2.  如何能够让一个东西自动帮我导入和配置这个jar包。
 
-由此，Maven诞生了！
+
+
+
+## 5、Maven
+
+**我为什么要学习这个技术？**
+
+1. 在Javaweb开发中，需要使用大量的jar包，我们手动去导入；
+
+2. 如何能够让一个东西自动帮我导入和配置这个jar包。
+
+   由此，Maven诞生了！
+
+
 
 ### 5.1 Maven项目架构管理工具
- 我们目前用来就是方便导入jar包的！
+
+我们目前用来就是方便导入jar包的！
+
 Maven的核心思想：**约定大于配置**
+
 - 有约束，不要去违反。
 
-Maven会规定好你该如何去编写我们Java代码，必须要按照这个规范来；
-### 5.2下载安装Maven
-官网：[https://maven.apache.org/](https://maven.apache.org/)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200506180036622.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+Maven会规定好你该如何去编写我们的Java代码，必须要按照这个规范来；
+
+### 5.2 下载安装Maven
+
+官网;https://maven.apache.org/
+
+![1567842350606](JavaWeb.assets/1567842350606.png)
 
 下载完成后，解压即可；
-小狂神友情建议：电脑上的所有环境都放在一个文件夹下，方便管理；
-### 5.3配置环境变量
-在我们的系统环境变量中配置如下配置：
-- M2_HOME maven目录下的bin目录
-- MAVEN_HOME maven的目录
-- 在系统的path中配置%MAVEN_HOME%\bin
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200423213124579.png)
-测试Maven是否安装成功，保证必须配置完毕！
-### 5.4阿里云镜像
-- 镜像：mirrors 
-- 作用：加速我们的下载 
-- 国内建议使用阿里云的镜像
 
+小狂神友情建议：电脑上的所有环境都放在一个文件夹下，方便管理；
+
+
+
+### 5.3 配置环境变量
+
+在我们的系统环境变量中
+
+配置如下配置：
+
+- M2_HOME     maven目录下的bin目录
+- MAVEN_HOME      maven的目录
+- 在系统的path中配置  %MAVEN_HOME%\bin
+
+![1567842882993](JavaWeb.assets/1567842882993.png)
+
+测试Maven是否安装成功，保证必须配置完毕！
+
+### 5.4 阿里云镜像
+
+![1567844609399](JavaWeb.assets/1567844609399.png)
+
+- 镜像：mirrors
+  - 作用：加速我们的下载
+- 国内建议使用阿里云的镜像
 
 ```xml
 <mirror>
@@ -294,47 +463,306 @@ Maven会规定好你该如何去编写我们Java代码，必须要按照这个�
 </mirror>
 ```
 
-**D:Enmvironment\apache-maven-3.6.2conf\ettings.xml**
-（狂神老师配置源和仓库的文件位置）
+### 5.5 本地仓库
 
-### 5.5本地仓库
- 在本地的仓库，远程仓库； 建立一个本地仓库：localRepository
-```php
+在本地的仓库，远程仓库；
+
+**建立一个本地仓库：**localRepository
+
+```xml
 <localRepository>D:\Environment\apache-maven-3.6.2\maven-repo</localRepository>
 ```
-### 5.6 ~ 5.13笔记-下载地址
-（拒接度盘）下载地址：[https://wo-bell.lanzous.com/ibuibxi](https://wo-bell.lanzous.com/ibuibxi)
 
-后面的 **5.6 ~ 5.13 + 案例演示** (图)
+### 5.6、在IDEA中使用Maven
+
+1. 启动IDEA
+
+2. 创建一个MavenWeb项目
+
+   ![1567844785602](JavaWeb.assets/1567844785602.png)
+
+   ![1567844841172](JavaWeb.assets/1567844841172.png)
+
+   ![1567844917185](JavaWeb.assets/1567844917185.png)
+
+   ![1567844956177](JavaWeb.assets/1567844956177.png)
+
+   ![1567845029864](JavaWeb.assets/1567845029864.png)
+
+3. 等待项目初始化完毕
+
+   ![1567845105970](JavaWeb.assets/1567845105970.png)
+
+   ![1567845137978](JavaWeb.assets/1567845137978.png)
+
+4. 观察maven仓库中多了什么东西？
+
+5. IDEA中的Maven设置
+
+   注意：IDEA项目创建成功后，看一眼Maven的配置
+
+   ![1567845341956](JavaWeb.assets/1567845341956.png)
+
+   ![1567845413672](JavaWeb.assets/1567845413672.png)
+
+6. 到这里，Maven在IDEA中的配置和使用就OK了!
+
+### 5.7、创建一个普通的Maven项目
+
+![1567845557744](JavaWeb.assets/1567845557744.png)
+
+![1567845717377](JavaWeb.assets/1567845717377.png)
+
+这个只有在Web应用下才会有！
+
+![1567845782034](JavaWeb.assets/1567845782034.png)
+
+### 5.8 标记文件夹功能
+
+![1567845910728](JavaWeb.assets/1567845910728.png)
+
+![1567845957139](JavaWeb.assets/1567845957139.png)
+
+![1567846034906](JavaWeb.assets/1567846034906.png)
+
+![1567846073511](JavaWeb.assets/1567846073511.png)
+
+### 5.9 在 IDEA中配置Tomcat
+
+![1567846140348](JavaWeb.assets/1567846140348.png)
+
+![1567846179573](JavaWeb.assets/1567846179573.png)
+
+![1567846234175](JavaWeb.assets/1567846234175.png)
+
+![1567846369751](JavaWeb.assets/1567846369751.png)
+
+解决警告问题
+
+必须要的配置：**为什么会有这个问题：我们访问一个网站，需要指定一个文件夹名字；**
+
+![1567846421963](JavaWeb.assets/1567846421963.png)
+
+![1567846546465](JavaWeb.assets/1567846546465.png)
+
+![1567846559111](JavaWeb.assets/1567846559111.png)
+
+![1567846640372](JavaWeb.assets/1567846640372.png)
+
+### 5.10 pom文件
+
+pom.xml 是Maven的核心配置文件
+
+![1567846784849](JavaWeb.assets/1567846784849.png)
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Maven版本和头文件-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <!--这里就是我们刚才配置的GAV-->
+  <groupId>com.kuang</groupId>
+  <artifactId>javaweb-01-maven</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <!--Package：项目的打包方式
+  jar：java应用
+  war：JavaWeb应用
+  -->
+  <packaging>war</packaging>
 
 
-**后面第 5 剩下部分的笔记建议配合狂神的
-“javaweb-06：IDEA中Maven的操作”、“javaweb-07：解决大家遇到的一些问题” 
-仔细（回）看**
+  <!--配置-->
+  <properties>
+    <!--项目的默认构建编码-->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!--编码版本-->
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
 
- ## 6、Servlet
-###  6.1、Servlet简介
+  <!--项目依赖-->
+  <dependencies>
+    <!--具体依赖的jar包配置文件-->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+    </dependency>
+  </dependencies>
+
+  <!--项目构建用的东西-->
+  <build>
+    <finalName>javaweb-01-maven</finalName>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.1.0</version>
+        </plugin>
+        <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging -->
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.22.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-war-plugin</artifactId>
+          <version>3.2.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>2.5.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.8.2</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>
+
+```
+
+![1567847410771](JavaWeb.assets/1567847410771.png)
+
+
+
+maven由于他的约定大于配置，我们之后可以能遇到我们写的配置文件，无法被导出或者生效的问题，解决方案：
+
+```xml
+<!--在build中配置resources，来防止我们资源导出失败的问题-->
+<build>
+    <resources>
+        <resource>
+            <directory>src/main/resources</directory>
+            <includes>
+                <include>**/*.properties</include>
+                <include>**/*.xml</include>
+            </includes>
+            <filtering>true</filtering>
+        </resource>
+        <resource>
+            <directory>src/main/java</directory>
+            <includes>
+                <include>**/*.properties</include>
+                <include>**/*.xml</include>
+            </includes>
+            <filtering>true</filtering>
+        </resource>
+    </resources>
+</build>
+```
+
+
+
+### 5.12 IDEA操作
+
+![1567847630808](JavaWeb.assets/1567847630808.png)
+
+
+
+![1567847662429](JavaWeb.assets/1567847662429.png)
+
+
+
+### 5.13 解决遇到的问题
+
+1. Maven 3.6.2
+
+   解决方法：降级为3.6.1
+
+   ![1567904721301](JavaWeb.assets/1567904721301.png)
+
+2. Tomcat闪退
+
+   
+
+3. IDEA中每次都要重复配置Maven
+   在IDEA中的全局默认配置中去配置
+
+   ![1567905247201](JavaWeb.assets/1567905247201.png)
+
+   ![1567905291002](JavaWeb.assets/1567905291002.png)
+
+4. Maven项目中Tomcat无法配置
+
+5. maven默认web项目中的web.xml版本问题
+
+   ![1567905537026](JavaWeb.assets/1567905537026.png)
+
+6. 替换为webapp4.0版本和tomcat一致
+
+   ```xml
+   <?xml version="1.0" encoding="UTF-8"?>
+   <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                         http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+            version="4.0"
+            metadata-complete="true">
+   
+   
+   
+   </web-app>
+   ```
+
+   
+
+7. Maven仓库的使用
+
+   地址：https://mvnrepository.com/
+
+   ![1567905870750](JavaWeb.assets/1567905870750.png)
+
+   ![1567905982979](JavaWeb.assets/1567905982979.png)
+
+   ![1567906017448](JavaWeb.assets/1567906017448.png)
+
+   ![1567906039469](JavaWeb.assets/1567906039469.png)
+
+
+
+## 6、Servlet
+
+### 6.1、Servlet简介
+
 - Servlet就是sun公司开发动态web的一门技术
-- Sun在这些APi中提供一个接口叫做：Servlet，如果你想开发一个Servlet程序，只需要完成两个小步骤：
-   - 编写一个类，实现Serlet接口
-    - 把开发好java类部署到web服务器中。	
+- Sun在这些API中提供一个接口叫做：Servlet，如果你想开发一个Servlet程序，只需要完成两个小步骤：
+  - 编写一个类，实现Servlet接口
+  - 把开发好的Java类部署到web服务器中。
 
- **把实现了Servlet接口的Java程序叫做，Servlet**
-### 6.2、HelloServlet
- Serlvet接口Sun公司有两个默认的实现类：HttpServlet，GenericServled
+**把实现了Servlet接口的Java程序叫做，Servlet**
 
 ### 6.2、HelloServlet
-1. 构建一个普通的Maven项目，等理面的sc目录，以后我们的学习就在这个项目里面建立Moudel；这个空的工程就题Maven主工程；
-2. 关于Maven父子工程的理解；
-	父项目中会有
 
- ```xml
+Serlvet接口Sun公司有两个默认的实现类：HttpServlet，GenericServlet
+
+
+
+1. 构建一个普通的Maven项目，删掉里面的src目录，以后我们的学习就在这个项目里面建立Moudel；这个空的工程就是Maven主工程；
+
+2. 关于Maven父子工程的理解：
+
+   父项目中会有
+
+   ```xml
        <modules>
            <module>servlet-01</module>
        </modules>
- ```
+   ```
 
-子项目会有
+   子项目会有
 
    ```xml
        <parent>
@@ -343,23 +771,27 @@ Maven会规定好你该如何去编写我们Java代码，必须要按照这个�
            <version>1.0-SNAPSHOT</version>
        </parent>
    ```
-父项目中的java子项目可以直接使用 
 
-```java
-son extends father
-```
+   父项目中的java子项目可以直接使用
+
+   ```java
+   son extends father
+   ```
 
 3. Maven环境优化
-	1. 修改web.xml为最新的
-	2. 将maven的结构搭建完整
-	.		 
+
+   1. 修改web.xml为最新的
+   2. 将maven的结构搭建完整
+
 4. 编写一个Servlet程序
-	1. 编写一个普通类
-	2. 实现Servlet接口，这里我们直接继承HttpServlet
 
- 
+   ![1567911804700](JavaWeb.assets/1567911804700.png)
 
- ```java
+   1. 编写一个普通类
+
+   2. 实现Servlet接口，这里我们直接继承HttpServlet
+
+      ```java
       public class HelloServlet extends HttpServlet {
           
           //由于get或者post只是请求实现的不同的方式，可以相互调用，业务逻辑都一样；
@@ -376,11 +808,13 @@ son extends father
           }
       }
       
- ```
- 5. 编写Servlet的映射
-    为什么需要映射：我们写的是JAVA程序，但是要通过浏览器访问，而浏览器需要连接web服务器，所以我们需
-    要再web服务中注册我们写的Servlet，还需给他一个浏览器能够访问的路径；
- ```xml
+      ```
+
+5. 编写Servlet的映射
+
+   为什么需要映射：我们写的是JAVA程序，但是要通过浏览器访问，而浏览器需要连接web服务器，所以我们需要再web服务中注册我们写的Servlet，还需给他一个浏览器能够访问的路径；
+
+   ```xml
    
        <!--注册Servlet-->
        <servlet>
@@ -393,31 +827,36 @@ son extends father
            <url-pattern>/hello</url-pattern>
        </servlet-mapping>
    
- ```
-6. 配置Tomcat
-注意：配置项目发布的路径就可以了
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200426163434449.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200426163446264.png)
-7. 启动测试，OK！
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200426163526430.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
- ### 6.3、Servlet原理
- Servlet是由Web服务器调用，web服务器在收到浏览器请求之后，会：
-  ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200506180639329.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+   ```
 
+   
+
+6. 配置Tomcat
+
+   注意：配置项目发布的路径就可以了
+
+7. 启动测试，OK！
+
+### 6.3、Servlet原理
+
+Servlet是由Web服务器调用，web服务器在收到浏览器请求之后，会：
+
+![1567913793252](JavaWeb.assets/1567913793252.png)
 
 ### 6.4、Mapping问题
-1. 一个Servlet可以指定一个映射路径
- .
 
- ```xml
+1. 一个Servlet可以指定一个映射路径
+
+   ```xml
        <servlet-mapping>
            <servlet-name>hello</servlet-name>
            <url-pattern>/hello</url-pattern>
        </servlet-mapping>
- ```
+   ```
 
-2. 一个servlet可以指定多个映射路径
- ```xml
+2. 一个Servlet可以指定多个映射路径
+
+   ```xml
        <servlet-mapping>
            <servlet-name>hello</servlet-name>
            <url-pattern>/hello</url-pattern>
@@ -439,26 +878,30 @@ son extends father
            <url-pattern>/hello5</url-pattern>
        </servlet-mapping>
    
- ```
-3. 一个servlet可以指定通用映射路径
- ```xml
+   ```
+
+3. 一个Servlet可以指定通用映射路径
+
+   ```xml
        <servlet-mapping>
            <servlet-name>hello</servlet-name>
            <url-pattern>/hello/*</url-pattern>
        </servlet-mapping>
- ```
+   ```
+
 4. 默认请求路径
 
-```xml
+   ```xml
        <!--默认请求路径-->
        <servlet-mapping>
            <servlet-name>hello</servlet-name>
            <url-pattern>/*</url-pattern>
        </servlet-mapping>
-```
-5. 指定一些后缀或者前缀等等....
+   ```
 
- ```xml
+5. 指定一些后缀或者前缀等等….
+
+   ```xml
    
    <!--可以自定义后缀实现请求映射
        注意点，*前面不能加项目映射的路径
@@ -468,12 +911,12 @@ son extends father
        <servlet-name>hello</servlet-name>
        <url-pattern>*.qinjiang</url-pattern>
    </servlet-mapping>
- ```
+   ```
 
 6. 优先级问题
-指定了固有的映射路径优先级最高，如果找不到就会走默认的处理请求；
+   指定了固有的映射路径优先级最高，如果找不到就会走默认的处理请求；
 
- ```xml
+   ```xml
    <!--404-->
    <servlet>
        <servlet-name>error</servlet-name>
@@ -484,12 +927,17 @@ son extends father
        <url-pattern>/*</url-pattern>
    </servlet-mapping>
    
- ```
-###    6.5、ServletContext
- web容器在启动的时候，它会为每个web程序都创建一个对应的ServletContext对象，它代表了当前的web应用；
-#### 1、共享数据
-我在这个Servlet中保存的数据，可以在另外一个servlet中拿到；
+   ```
 
+   
+
+### 6.5、ServletContext
+
+web容器在启动的时候，它会为每个web程序都创建一个对应的ServletContext对象，它代表了当前的web应用；
+
+#### 1、共享数据
+
+我在这个Servlet中保存的数据，可以在另外一个servlet中拿到；
 
 ```java
 public class HelloServlet extends HttpServlet {
@@ -531,7 +979,7 @@ public class GetServlet extends HttpServlet {
 
 ```
 
-```xml
+```XML
     <servlet>
         <servlet-name>hello</servlet-name>
         <servlet-class>com.kuang.servlet.HelloServlet</servlet-class>
@@ -551,7 +999,11 @@ public class GetServlet extends HttpServlet {
         <url-pattern>/getc</url-pattern>
     </servlet-mapping>
 ```
+
 测试访问结果；
+
+
+
 #### 2、获取初始化参数
 
 ```xml
@@ -569,6 +1021,7 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
     resp.getWriter().print(url);
 }
 ```
+
 #### 3、请求转发
 
 ```java
@@ -581,18 +1034,24 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
     context.getRequestDispatcher("/gp").forward(req,resp);
 }
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200505153728272.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
-4、读取资源文件
- Properties
+
+![1567924457532](JavaWeb.assets/1567924457532.png)
+
+#### 4、读取资源文件
+
+Properties
+
 - 在java目录下新建properties
 - 在resources目录下新建properties
 
 发现：都被打包到了同一个路径下：classes，我们俗称这个路径为classpath:
-思路：需要一个文件流
 
-	username=root12312
-	password=zxczxczxc
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200505153908944.png)
+思路：需要一个文件流；
+
+```properties
+username=root12312
+password=zxczxczxc
+```
 
 ```java
 public class ServletDemo05 extends HttpServlet {
@@ -617,46 +1076,107 @@ public class ServletDemo05 extends HttpServlet {
 }
 
 ```
-访问测试即可ok;
+
+访问测试即可ok；
+
 ### 6.6、HttpServletResponse
-    web服务器接收到客户端的http请求，针对这个请求，分别创建一个代表请求的HttpServletRequest
-    对象，代表响应的一个HttpServletResponse；
- - 如果要获取客户端请求过来的参数：找HttpServletRequest
+
+web服务器接收到客户端的http请求，针对这个请求，分别创建一个代表请求的HttpServletRequest对象，代表响应的一个HttpServletResponse；
+
+- 如果要获取客户端请求过来的参数：找HttpServletRequest
 - 如果要给客户端响应一些信息：找HttpServletResponse
-  ####  1、简单分类
-  负责向浏览器发送数据的方法
+
+#### 1、简单分类
+
+负责向浏览器发送数据的方法
+
 ```java
- servletOutputstream getOutputstream() throws IOException;
-    Printwriter getwriter() throws IOException;
+ServletOutputStream getOutputStream() throws IOException;
+PrintWriter getWriter() throws IOException;
 ```
+
 负责向浏览器发送响应头的方法
 
 ```java
-void setCharacterEncoding(String var1)；
-void setContentLength(int var1)；
-void setContentLengthLong(long var1);
-void setContentType(String var1)；
-void setDateHeader(String varl,long var2)
-void addDateHeader(String var1,long var2)
-void setHeader(String var1,String var2);
-void addHeader(String var1,String var2)；
-void setIntHeader(String var1,int var2);
-void addIntHeader(String varl,int var2);
+    void setCharacterEncoding(String var1);
+
+    void setContentLength(int var1);
+
+    void setContentLengthLong(long var1);
+
+    void setContentType(String var1);
+
+    void setDateHeader(String var1, long var2);
+
+    void addDateHeader(String var1, long var2);
+
+    void setHeader(String var1, String var2);
+
+    void addHeader(String var1, String var2);
+
+    void setIntHeader(String var1, int var2);
+
+    void addIntHeader(String var1, int var2);
 ```
+
 响应的状态码
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200505155751598.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200505155821202.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+
+```java
+    int SC_CONTINUE = 100;
+    int SC_SWITCHING_PROTOCOLS = 101;
+    int SC_OK = 200;
+    int SC_CREATED = 201;
+    int SC_ACCEPTED = 202;
+    int SC_NON_AUTHORITATIVE_INFORMATION = 203;
+    int SC_NO_CONTENT = 204;
+    int SC_RESET_CONTENT = 205;
+    int SC_PARTIAL_CONTENT = 206;
+    int SC_MULTIPLE_CHOICES = 300;
+    int SC_MOVED_PERMANENTLY = 301;
+    int SC_MOVED_TEMPORARILY = 302;
+    int SC_FOUND = 302;
+    int SC_SEE_OTHER = 303;
+    int SC_NOT_MODIFIED = 304;
+    int SC_USE_PROXY = 305;
+    int SC_TEMPORARY_REDIRECT = 307;
+    int SC_BAD_REQUEST = 400;
+    int SC_UNAUTHORIZED = 401;
+    int SC_PAYMENT_REQUIRED = 402;
+    int SC_FORBIDDEN = 403;
+    int SC_NOT_FOUND = 404;
+    int SC_METHOD_NOT_ALLOWED = 405;
+    int SC_NOT_ACCEPTABLE = 406;
+    int SC_PROXY_AUTHENTICATION_REQUIRED = 407;
+    int SC_REQUEST_TIMEOUT = 408;
+    int SC_CONFLICT = 409;
+    int SC_GONE = 410;
+    int SC_LENGTH_REQUIRED = 411;
+    int SC_PRECONDITION_FAILED = 412;
+    int SC_REQUEST_ENTITY_TOO_LARGE = 413;
+    int SC_REQUEST_URI_TOO_LONG = 414;
+    int SC_UNSUPPORTED_MEDIA_TYPE = 415;
+    int SC_REQUESTED_RANGE_NOT_SATISFIABLE = 416;
+    int SC_EXPECTATION_FAILED = 417;
+    int SC_INTERNAL_SERVER_ERROR = 500;
+    int SC_NOT_IMPLEMENTED = 501;
+    int SC_BAD_GATEWAY = 502;
+    int SC_SERVICE_UNAVAILABLE = 503;
+    int SC_GATEWAY_TIMEOUT = 504;
+    int SC_HTTP_VERSION_NOT_SUPPORTED = 505;
+```
+
 #### 2、下载文件
-1. 向浏览器输出消息（一直在讲，就不说了）
+
+1. 向浏览器输出消息 （一直在讲，就不说了）
 2. 下载文件
-    1. 要获取下载文件的路径
-    2. 下载的文件名是啥？
-    3. 设置想办法让浏览器能够支持下载我们需要的东西
-    4. 获取下载文件的输入流
-    5. 创建缓冲区
-    6. 获取OutputStream对象
-    7. 将FileOutputStream流写入到bufer缓冲区
-    8. 使用OutputStream将缓冲区中的数据输出到客户端！
+   1. 要获取下载文件的路径
+   2. 下载的文件名是啥？
+   3. 设置想办法让浏览器能够支持下载我们需要的东西
+   4. 获取下载文件的输入流
+   5. 创建缓冲区
+   6. 获取OutputStream对象
+   7. 将FileOutputStream流写入到buffer缓冲区
+   8. 使用OutputStream将缓冲区中的数据输出到客户端！
 
 ```java
 @Override
@@ -684,10 +1204,13 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
     out.close();
 }
 ```
- #### 3、验证码功能
- 验证怎么来的?
--    前端实现
--    后端实现，需要用到Java的图片类，生产一个图片
+
+#### 3、验证码功能
+
+验证怎么来的？
+
+- 前端实现
+- 后端实现，需要用到 Java 的图片类，生产一个图片
 
 ```java
 package com.kuang.servlet;
@@ -755,143 +1278,154 @@ public class ImageServlet extends HttpServlet {
 
 ```
 
-```xml
-<servlet>
-	<servlet-name>ImageServlet</servlet-name>
-	<servlet-class>com.kuang.servlet.ImageServlet</servlet-class>
-</servlet>
-<servlet-mapping>
-	<servlet-name>Imageservlet</servlet-name>
-	<url-pattern>/img</url-pattern>
-</servlet-mapping>
-```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200505163538698.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
-常见场景:
- - 用户登录
+#### 4、实现重定向
+
+![1567931587955](JavaWeb.assets/1567931587955.png)
+
+B一个web资源收到客户端A请求后，B他会通知A客户端去访问另外一个web资源C，这个过程叫重定向
+
+常见场景：
+
+- 用户登录
 
 ```java
- void sendRedirect(String var1) throws IOException;
+void sendRedirect(String var1) throws IOException;
 ```
+
 测试：
 
 ```java
-@override
-protected void doGet(HttpservletRequest req, HttpservletResponse resp) throws ServletException, IOException {
+@Override
+protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-    resp. sendRedirect("/r/img");//重定向
     /*
-    resp. setHeader("Location","/r/img");
-    resp. setstatus (302);
-    *
+        resp.setHeader("Location","/r/img");
+        resp.setStatus(302);
+         */
+    resp.sendRedirect("/r/img");//重定向
 }
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200505163946136.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200505163953854.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
-**index.jsp**
-```html
-<html>
-	<body>
-		<h2>Hel1o World!</h2>
-		
-		<%--这里超交的路径,需要寻找到项目的路径--%>
-		<%--${pageContext. request, contextPath}代表当前的项目--%>
-		<form action="${pageContext.request.contextPath}/login" method="get">
-			用户名: <input type="text" name="username"> <br>
-			密码: <input type="password" name="password"> <br>
-			<input type="submit">
-		</form>
-	
-	</body>
-</html>
-```
-**RequestTest.java**
 
-```java
-public class RequestTest extends HttpServlet {
+面试题：请你聊聊重定向和转发的区别？
+
+相同点
+
+- 页面都会实现跳转
+
+不同点
+
+- 请求转发的时候，url不会产生变化
+- 重定向时候，url地址栏会发生变化；
+
+![1567932163430](JavaWeb.assets/1567932163430.png)
+
+#### 5、简单实现登录重定向
+
+```jsp
+<%--这里提交的路径，需要寻找到项目的路径--%>
+<%--${pageContext.request.contextPath}代表当前的项目--%>
+
+<form action="${pageContext.request.contextPath}/login" method="get">
+    用户名：<input type="text" name="username"> <br>
+    密码：<input type="password" name="password"> <br>
+    <input type="submit">
+</form>
+
+```
+
+```JAVA
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-    //处理方求
-    String username = req.getParameter( s: "username");
-    String password  rea.getParameter( s: "password");
+        //处理请求
+        String username = req.getParameter("username");
+        String password = req.getParameter("password");
 
-    System.out.println(username+":"+password);
+        System.out.println(username+":"+password);
 
-    resp.sendRedirect(s: "/r/success.jsp");
-}
+        //重定向时候一定要注意，路径问题，否则404；
+        resp.sendRedirect("/r/success.jsp");
+    }
+
 ```
-**重定向页面success.jsp**
-
-```html
-<%@ page contentType="text/html; charset=UTF-8" language="java" %>
-<html>
-    <head>
-	    <title>Title</title>
-	    </head>
-    <body>
-    	<h1>success</h1>
-    </body>
-</html>
-```
-**web.xml配置**
 
 ```xml
-    <servlet>
+  <servlet>
     <servlet-name>requset</servlet-name>
-    <servlet-class>com. kuang. servlet. RequestTest</servlet-class>
-    </servlet>
-    <servlet-mapping>
+    <servlet-class>com.kuang.servlet.RequestTest</servlet-class>
+  </servlet>
+  <servlet-mapping>
     <servlet-name>requset</servlet-name>
     <url-pattern>/login</url-pattern>
-    </servlet-mapping>
+  </servlet-mapping>
 ```
-**导入依赖的jar包**
 
-```xml
-    <dependencies>
-    <!-- https://mvnrepository. com/artifact/javax. servLet/javax. servlet-opi -->
-    <dependency>
-    <groupld>javax.servlet</grouptd>
-    <artifactId>javax. servlet-api</artifactId>
-    <version>4.0.1</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/javax. servLet.jsp/javax. servLet.jsp-opi -->
-    <dependency>
-    <groupId>javax.servlet.jsp</groupld>
-    <artifactId>javax. servlet.jsp-api</artifactId>
-    <version>2.3.3</version>
-    </dependency>
-    </dependencies>
-    </project>
+```jsp
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Success</h1>
+
+</body>
+</html>
+
 ```
-###    6.7、HttpServletRequest
- HttpServletRequest代表客户端的请求,用户通过Http协议访问服务器, HTTP请求中的所有信息会被封装到HttpServletRequest,通过这个HttpServletRequest的方法,获得客户端的所有信息;
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200505165609562.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200505165618601.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
-#### 获取参数,请求转发
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200505165652729.png)
-**自己创建类，且需要继承HttpServlet类**
+
+### 6.7、HttpServletRequest
+
+HttpServletRequest代表客户端的请求，用户通过Http协议访问服务器，HTTP请求中的所有信息会被封装到HttpServletRequest，通过这个HttpServletRequest的方法，获得客户端的所有信息；
+
+![1567933996830](JavaWeb.assets/1567933996830.png)
+
+![1567934023106](JavaWeb.assets/1567934023106.png)
+
+#### 获取参数，请求转发
+
+![1567934110794](JavaWeb.assets/1567934110794.png)
+
 ```java
 @Override
-protected void doGet(HttpservletRequest req. HttpservletResponse resp) throws ServletException, IOException {
+protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-	req. setcharacterEncoding("utf-8");
-	resp.setcharacterEncoding("utf-8");
-	String username = req.getParameter("username");
-	String password = req.getParameter("password");
-	String[] hobbys = req.getParameterValues("hobbys");
-	System.out.println("==========");
-	//后台接收中文乱码问题
-	System. out.println(username);
-	System. out.println(password);
-	System. out.println(Arrays.tostring(hobbys));
-	System. out.println("============");
-	system. out.println(req.getContextPath());
-	//通过请求转发
-	//这里的/代表当前的web应用
-	req.getRequestDispatcher("/success.jsp").forward(req,resp);
+    req.setCharacterEncoding("utf-8");
+    resp.setCharacterEncoding("utf-8");
+
+    String username = req.getParameter("username");
+    String password = req.getParameter("password");
+    String[] hobbys = req.getParameterValues("hobbys");
+    System.out.println("=============================");
+    //后台接收中文乱码问题
+    System.out.println(username);
+    System.out.println(password);
+    System.out.println(Arrays.toString(hobbys));
+    System.out.println("=============================");
+
+
+    System.out.println(req.getContextPath());
+    //通过请求转发
+    //这里的 / 代表当前的web应用
+    req.getRequestDispatcher("/success.jsp").forward(req,resp);
+
 }
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200505170535748.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+
+**面试题：请你聊聊重定向和转发的区别？**
+
+相同点
+
+- 页面都会实现跳转
+
+不同点
+
+- 请求转发的时候，url不会产生变化   307
+- 重定向时候，url地址栏会发生变化； 302
+
+
+
 ## 7、Cookie、Session
 
 ### 7.1、会话
@@ -931,7 +1465,9 @@ protected void doGet(HttpservletRequest req. HttpservletResponse resp) throws Se
 常见常见：网站登录之后，你下次不用再登录了，第二次访问直接就上去了！
 
 ### 7.3、Cookie
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200506182559338.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+
+![1568344447291](JavaWeb.assets/1568344447291.png)
+
 1. 从请求中拿到cookie信息
 2. 服务器响应给客户端cookie
 
@@ -974,16 +1510,16 @@ URLDecoder.decode(cookie.getValue(),"UTF-8")
 
 
 ### 7.4、Session（重点）
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020050618262991.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+
+![1568344560794](JavaWeb.assets/1568344560794.png)
+
 什么是Session：
 
 - 服务器会给每一个用户（浏览器）创建一个Seesion对象；
 - 一个Seesion独占一个浏览器，只要浏览器没有关闭，这个Session就存在；
 - 用户登录之后，整个网站它都可以访问！--> 保存用户的信息；保存购物车的信息…..
 
-..
-..
-..
+![1568342773861](JavaWeb.assets/1568342773861.png)
 
 Session和cookie的区别：
 
@@ -1046,9 +1582,7 @@ public class SessionDemo01 extends HttpServlet {
         doGet(req, resp);
     }
 }
-```
 
-```java
 //得到Session
 HttpSession session = req.getSession();
 
@@ -1073,7 +1607,13 @@ session.invalidate();
     <session-timeout>15</session-timeout>
 </session-config>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020050618301064.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+
+
+
+![1568344679763](JavaWeb.assets/1568344679763.png)
+
+
+
 ## 8、JSP
 
 ### 8.1、什么是JSP
@@ -1101,16 +1641,18 @@ Java Server Pages ： Java服务器端页面，也和Servlet一样，用于动�
 
   IDEA中使用Tomcat的会在IDEA的tomcat中生产一个work目录
 
-  ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200506184154282.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
-
+  ![1568345873736](JavaWeb.assets/1568345873736.png)
 
   我电脑的地址：
 
-  **C:\Users\Administrator\.IntelliJIdea2018.1\system\tomcat\Unnamed_javaweb-session-cookie\work\Catalina\localhost\ROOT\org\apache\jsp**
-
+  ```java
+  C:\Users\Administrator\.IntelliJIdea2018.1\system\tomcat\Unnamed_javaweb-session-cookie\work\Catalina\localhost\ROOT\org\apache\jsp
+  ```
 
   发现页面转变成了Java程序！
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200506184204931.png)
+
+  ![1568345948307](JavaWeb.assets/1568345948307.png)
+
 
 
 **浏览器向服务器发送请求，不管访问什么资源，其实都是在访问Servlet！**
@@ -1129,6 +1671,7 @@ JSP最终也会被转换成为一个Java类！
   }
 //JSPService
   public void _jspService(.HttpServletRequest request,HttpServletResponse response)
+      
 ```
 
 1. 判断请求
@@ -1151,7 +1694,7 @@ JSP最终也会被转换成为一个Java类！
    ```java
    response.setContentType("text/html");       //设置响应的页面类型
    pageContext = _jspxFactory.getPageContext(this, request, response,
-          null, true, 8192, true);
+                                             null, true, 8192, true);
    _jspx_page_context = pageContext;
    application = pageContext.getServletContext();
    config = pageContext.getServletConfig();
@@ -1162,7 +1705,8 @@ JSP最终也会被转换成为一个Java类！
 
 4. 以上的这些个对象我们可以在JSP页面中直接使用！
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200506183804973.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+![1568347078207](JavaWeb.assets/1568347078207.png)
+
 
 
 在JSP页面中；
@@ -1185,9 +1729,9 @@ out.write("<html>\r\n");
 
 
 
-#### JSP表达式
+#### **JSP表达式**
 
-```java
+```jsp
   <%--JSP表达式
   作用：用来将程序的输出，输出到客户端
   <%= 变量或者表达式%>
@@ -1197,9 +1741,9 @@ out.write("<html>\r\n");
 
 
 
-#### jsp脚本片段
+#### **jsp脚本片段**
 
-```java
+```jsp
 
   <%--jsp脚本片段--%>
   <%
@@ -1216,7 +1760,7 @@ out.write("<html>\r\n");
 
 **脚本片段的再实现**
 
-```java
+```jsp
   <%
     int x = 10;
     out.println(x);
@@ -1244,7 +1788,7 @@ out.write("<html>\r\n");
 
 #### JSP声明
 
-```java
+```jsp
   <%!
     static {
       System.out.println("Loading Servlet!");
@@ -1264,7 +1808,7 @@ JSP声明：会被编译到JSP生成Java的类中！其他的，就会被生成�
 
 在JSP，嵌入Java代码即可！
 
-```java
+```jsp
 <%%>
 <%=%>
 <%!%>
@@ -1278,7 +1822,7 @@ JSP的注释，不会在客户端显示，HTML就会！
 
 ### 8.4、JSP指令
 
-```java
+```jsp
 <%@page args.... %>
 <%@include file=""%>
 
@@ -1322,8 +1866,6 @@ session.setAttribute("name3","秦疆3号"); //保存的数据只在一次会话�
 application.setAttribute("name4","秦疆4号");  //保存的数据只在服务器中有效，从打开服务器到关闭服务器
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200507213158259.png)
-
 request：客户端向服务器发送请求，产生的数据，用户看完就没用了，比如：新闻，用户看完没用的！
 
 session：客户端向服务器发送请求，产生的数据，用户用完一会还有用，比如：购物车；
@@ -1358,7 +1900,7 @@ EL表达式：  ${ }
 
 **JSP标签**
 
-```java
+```jsp
 <%--jsp:include--%>
 
 <%--
@@ -1385,7 +1927,7 @@ JSTL标签库的使用就是为了弥补HTML标签的不足；它自定义许多
 
 **核心标签** （掌握部分）
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200508152235704.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+![1568362473764](JavaWeb.assets/1568362473764.png)
 
 **JSTL标签库使用步骤**
 
@@ -1393,9 +1935,9 @@ JSTL标签库的使用就是为了弥补HTML标签的不足；它自定义许多
 - 使用其中的方法
 - **在Tomcat 也需要引入 jstl的包，否则会报错：JSTL解析错误**
 
-**c：if**
+c：if
 
-```java
+```jsp
 <head>
     <title>Title</title>
 </head>
@@ -1426,9 +1968,9 @@ JSTL标签库的使用就是为了弥补HTML标签的不足；它自定义许多
 </body>
 ```
 
-**c:choose   c:when**
+c:choose   c:when
 
-```java
+```jsp
 <body>
 
 <%--定义一个变量score，值为85--%>
@@ -1452,9 +1994,9 @@ JSTL标签库的使用就是为了弥补HTML标签的不足；它自定义许多
 </body>
 ```
 
-**c:forEach**
+c:forEach
 
-```java
+```jsp
 <%
 
     ArrayList<String> people = new ArrayList<>();
@@ -1485,7 +2027,9 @@ step,   步长
 </c:forEach>
 
 ```
+
 ## 9、JavaBean
+
 实体类
 
 JavaBean有特定的写法：
@@ -1525,17 +2069,22 @@ class A{
 }
 ```
 
+
+
 - 过滤器
 - 文件上传
 - 邮件发送
 - JDBC 复习 ： 如何使用JDBC ,  JDBC crud， jdbc 事务
+
+
+
 ## 10、MVC三层架构
 
-- 什么是MVC：  Model     view     Controller  模型、视图、控制器
+什么是MVC：  Model     view     Controller  模型、视图、控制器
 
-### 10.1、以前的架构
+### 10.1、早些年
 
-![(img-NGdCSHqw-1588757845418)(JavaWeb.assets/1568423664332.png)](https://img-blog.csdnimg.cn/20200508154442187.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+![1568423664332](JavaWeb.assets/1568423664332.png)
 
 用户直接访问控制层，控制层就可以直接操作数据库；
 
@@ -1546,21 +2095,22 @@ servlet的代码中：处理请求、响应、视图跳转、处理JDBC、处理
 
 架构：没有什么是加一层解决不了的！
 程序猿调用
-↑
-JDBC （实现该接口）
-↑
-Mysql Oracle SqlServer ....（不同厂商）
+|
+JDBC
+|
+Mysql Oracle SqlServer ....
 ```
+
 ### 10.2、MVC三层架构
 
-![(img-BWDJGUCN-1588757845419)(JavaWeb.assets/1568424227281.png)](https://img-blog.csdnimg.cn/20200508154512751.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+![1568424227281](JavaWeb.assets/1568424227281.png)
 
 
 
 Model
 
 - 业务处理 ：业务逻辑（Service）
-- 数据持久层：CRUD   （Dao - 数据持久化对象）
+- 数据持久层：CRUD   （Dao）
 
 View
 
@@ -1582,27 +2132,25 @@ Controller  （Servlet）
 
 
 ## 11、Filter （重点）
-比如 Shiro安全框架技术就是用Filter来实现的
 
 Filter：过滤器 ，用来过滤网站的数据；
 
 - 处理中文乱码
 - 登录验证….
 
-（比如用来过滤网上骂人的话，我***我自己 0-0）
+![1568424858708](JavaWeb.assets/1568424858708.png)
 
-![(img-QEq74VyV-1588757845420)(JavaWeb.assets/1568424858708.png)](https://img-blog.csdnimg.cn/20200508154536177.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
 Filter开发步骤：
 
 1. 导包
 
 2. 编写过滤器
 
-   1. 导包不要错 **（注意）**
+   1. 导包不要错
 
-![(img-HHsC3JBD-1588757845420)(JavaWeb.assets/1568425162525.png)](https://img-blog.csdnimg.cn/20200508154555952.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+      ![1568425162525](JavaWeb.assets/1568425162525.png)
 
-实现Filter接口，重写对应的方法即可
+      实现Filter接口，重写对应的方法即可
 
       ```java
       public class CharacterEncodingFilter implements Filter {
@@ -1628,7 +2176,7 @@ Filter开发步骤：
               System.out.println("CharacterEncodingFilter执行后....");
           }
       
-          //销毁：web服务器关闭的时候，过滤器会销毁
+          //销毁：web服务器关闭的时候，过滤会销毁
           public void destroy() {
               System.out.println("CharacterEncodingFilter销毁");
           }
@@ -1648,18 +2196,18 @@ Filter开发步骤：
        <!--只要是 /servlet的任何请求，会经过这个过滤器-->
        <url-pattern>/servlet/*</url-pattern>
        <!--<url-pattern>/*</url-pattern>-->
-       <!-- 别偷懒写个 /* -->
    </filter-mapping>
    ```
+
+   
+
 ## 12、监听器
 
-实现一个监听器的接口；（有n种监听器）
+实现一个监听器的接口；（有N种）
 
 1. 编写一个监听器
 
    实现监听器的接口…
-   
-   依赖的jar包![在这里插入图片描述](https://img-blog.csdnimg.cn/2020050820562995.png)
 
    ```java
    //统计网站在线人数 ： 统计session
@@ -1724,6 +2272,8 @@ Filter开发步骤：
 
 3. 看情况是否使用！
 
+
+
 ## 13、过滤器、监听器常见应用
 
 **监听器：GUI编程中经常使用；**
@@ -1753,6 +2303,7 @@ public class TestPanel {
             }
         });
 
+
     }
 }
 ```
@@ -1776,11 +2327,14 @@ public class TestPanel {
    chain.doFilter(request,response);
    ```
 
+
+
+
 ## 14、JDBC
 
 什么是JDBC ： Java连接数据库！
 
-![(img-rZzTXmtn-1588757845422)(JavaWeb.assets/1568439601825.png)](https://img-blog.csdnimg.cn/20200508154620734.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+![1568439601825](JavaWeb.assets/1568439601825.png)
 
 需要jar包的支持：
 
@@ -1829,7 +2383,7 @@ SELECT	* FROM users;
 
 IDEA中连接数据库：
 
-![(img-XErw4ElS-1588757845423)(JavaWeb.assets/1568440926845.png)](https://img-blog.csdnimg.cn/20200508154638633.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+![1568440926845](JavaWeb.assets/1568440926845.png)
 
 
 
@@ -1840,7 +2394,7 @@ IDEA中连接数据库：
 3. 向数据库发送SQL的对象Statement : CRUD
 4. 编写SQL （根据业务，不同的SQL）
 5. 执行SQL
-6. 关闭连接（先开的后关）
+6. 关闭连接
 
 ```java
 public class TestJdbc {
@@ -1974,11 +2528,11 @@ public void test(){
 }
 ```
 
-![(img-OsUubVNQ-1588757845424)(JavaWeb.assets/1568442261610.png)](https://img-blog.csdnimg.cn/20200508154657792.png)
+![1568442261610](JavaWeb.assets/1568442261610.png)
 
 失败的时候是红色：
 
-![(img-qv2oTEGI-1588757845425)(JavaWeb.assets/1568442289597.png)](https://img-blog.csdnimg.cn/20200508154708211.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+![1568442289597](JavaWeb.assets/1568442289597.png)
 
 
 
@@ -2044,10 +2598,4 @@ INSERT INTO account(`name`,money) VALUES('C',1000);
         }
     }
 ```
-## 15、SMBMS(超市管理项目)
-30~37集的SMBMS项目实验
-[B站狂神说 - Eclipse - SMBMS项目实验
-https://blog.csdn.net/bell_love/article/details/106157413](https://blog.csdn.net/bell_love/article/details/106157413)
-。。。
 
-![image-20210709125831296](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210709125831296.png)

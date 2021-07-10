@@ -28,7 +28,7 @@ web开发：
  Web酸用程序编写完毕后，若想提供给外界访问；需费一个服务蔬来统一管理
  ### 1.3、静态web
  - *.htm， *.html这些都是网员的后境、如果服务器上一直存在这些东四，我们就可以直接进行读取、需要网络；
- - ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200506174751665.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+ - ![在这里插入图片描述](https://cdn.jsdelivr.net/gh/azeng233/Image-Bed@master/img/2021-07-09_19-49-27.png)
 
 - 静态web存在的缺点
 	- Web页面无法动态更新，所有用户看到都是同一个页面
@@ -38,14 +38,14 @@ web开发：
 	- 它无法和数据库交互（数据无法持久化，用户无法交互）
 ### 1.4、 动态web
 页面会动态展示，“web页面的展示效果因人而异”
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200506175025436.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/azeng233/Image-Bed@master/img/2021-07-09_19-50-24.png)
   缺点：
 
 - 加入服务器的动态web资源出现了错误，我们需要重新编写我们的后台程序，重新发布；
 	- 停机维护优点：
 - Web页面可以动态更新，所有用户看到都不是同一个页面
 - 它可以与数据库交互（数据持久化：注册，商品信息，用户信息..……）
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200506175041602.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/azeng233/Image-Bed@master/img/2021-07-09_19-50-47.png)
 ## 2、web服务器
 ### 2.1、技术讲解
 **ASP:**
@@ -73,7 +73,7 @@ web开发：
 微软的；ASP.,Windows中自带的
 **Tomcat**
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200423183331323.png)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/azeng233/Image-Bed@master/img/2021-07-09_19-51-04.png)
  面向百度编程：
  Tomcat是Apache 软件基金会（Apache Software Foundation)的jakarta项目中的一个核心项目，最新的Servlet 和ISP 规范总是能在Tomcat中得到体现，因为Tomcat 技术先进、性能稳定，而且免费，因而深受lava爱好者的喜爱并得到了部分软件开发商的认可，成为目前比较流行的Web应用服务器。
 
@@ -92,22 +92,24 @@ Tomcat 实际上运行JSP页面和Serlet。Tornct最新版易9.0
 ### 3.1安装tomcat tomcat
 官网：[http://tomcat.apache.org/](http://tomcat.apache.org/)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200423183805916.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/azeng233/Image-Bed@master/img/2021-07-09_19-51-26.png)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200423183826267.png)
+
 ### 3.2、Tomcat启动和配置
 文件夹作用:
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200506175503686.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/azeng233/Image-Bed@master/img/2021-07-09_19-52-11.png)
 
-![](https://img-blog.csdnimg.cn/20200423184021633.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+![](https://cdn.jsdelivr.net/gh/azeng233/Image-Bed@master/img/2021-07-09_19-52-35.png)
 访问测试：[http://localhost:8080/](http://localhost:8080/)
 可能遇到的问题：
+
 1. Java环境变量没有配置
 2. 闪退问题：需要配置兼容性
 3. 乱码问题：配置文件中设置
 
 可以修改 conf/logging.properties 中的 java.util.logging.ConsoleHandler.encoding = GBK **解决乱码问题**
 ### 3.3、配置
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200506175624200.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/azeng233/Image-Bed@master/img/2021-07-09_19-54-28.png)
 
 可以配置启动的端口号
 - tomcat的默认端口号为：8080 
@@ -140,7 +142,7 @@ Tomcat 实际上运行JSP页面和Serlet。Tornct最新版易9.0
 		 127.0.0.1 www.qinjiang.com
 		```
 	 3. 没有：去DNS服务器找，找到的话就返回，找不到就返回找不到；
-	 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200423184922156.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+	 ![在这里插入图片描述](https://cdn.jsdelivr.net/gh/azeng233/Image-Bed@master/img/2021-07-09_19-54-49.png)
 
 4.可以配置一下环境变量（可选性）
 ### 3.4、发布一个web网站
@@ -244,6 +246,7 @@ Https:安全的
 
 
 
+
 #### 2、响应状态码
 200：请求响应成功200
 3xx:请求重定向·重定向：你重新到我给你新位置去；
@@ -268,7 +271,7 @@ Maven的核心思想：**约定大于配置**
 Maven会规定好你该如何去编写我们Java代码，必须要按照这个规范来；
 ### 5.2下载安装Maven
 官网：[https://maven.apache.org/](https://maven.apache.org/)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200506180036622.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/azeng233/Image-Bed@master/img/2021-07-09_19-55-13.png)
 
 下载完成后，解压即可；
 小狂神友情建议：电脑上的所有环境都放在一个文件夹下，方便管理；
@@ -277,7 +280,7 @@ Maven会规定好你该如何去编写我们Java代码，必须要按照这个�
 - M2_HOME maven目录下的bin目录
 - MAVEN_HOME maven的目录
 - 在系统的path中配置%MAVEN_HOME%\bin
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200423213124579.png)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/azeng233/Image-Bed@master/img/2021-07-09_19-55-45.png)
 测试Maven是否安装成功，保证必须配置完毕！
 ### 5.4阿里云镜像
 - 镜像：mirrors 
@@ -396,13 +399,13 @@ son extends father
  ```
 6. 配置Tomcat
 注意：配置项目发布的路径就可以了
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200426163434449.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述]([2021-07-09_19-56-07.png (638×443) (jsdelivr.net)](https://cdn.jsdelivr.net/gh/azeng233/Image-Bed@master/img/2021-07-09_19-56-07.png))
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200426163446264.png)
 7. 启动测试，OK！
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200426163526430.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/azeng233/Image-Bed@master/img/2021-07-09_19-56-27.png)
  ### 6.3、Servlet原理
  Servlet是由Web服务器调用，web服务器在收到浏览器请求之后，会：
-  ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200506180639329.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+  ![在这里插入图片描述](https://cdn.jsdelivr.net/gh/azeng233/Image-Bed@master/img/2021-07-09_19-56-45.png)
 
 
 ### 6.4、Mapping问题
@@ -581,9 +584,10 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
     context.getRequestDispatcher("/gp").forward(req,resp);
 }
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200505153728272.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/azeng233/Image-Bed@master/img/2021-07-09_19-57-04.png)
 4、读取资源文件
  Properties
+
 - 在java目录下新建properties
 - 在resources目录下新建properties
 
@@ -592,7 +596,7 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
 
 	username=root12312
 	password=zxczxczxc
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200505153908944.png)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/azeng233/Image-Bed@master/img/2021-07-09_19-58-28.png)
 
 ```java
 public class ServletDemo05 extends HttpServlet {
@@ -646,6 +650,7 @@ void addIntHeader(String varl,int var2);
 响应的状态码
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200505155751598.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200505155821202.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+
 #### 2、下载文件
 1. 向浏览器输出消息（一直在讲，就不说了）
 2. 下载文件
@@ -765,8 +770,9 @@ public class ImageServlet extends HttpServlet {
 	<url-pattern>/img</url-pattern>
 </servlet-mapping>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200505163538698.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/azeng233/Image-Bed@master/img/2021-07-09_19-58-58.png)
 常见场景:
+
  - 用户登录
 
 ```java
@@ -786,8 +792,9 @@ protected void doGet(HttpservletRequest req, HttpservletResponse resp) throws Se
 }
 ```
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200505163946136.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200505163953854.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/azeng233/Image-Bed@master/img/2021-07-09_20-00-04.png)
 **index.jsp**
+
 ```html
 <html>
 	<body>
@@ -865,11 +872,13 @@ public class RequestTest extends HttpServlet {
 ```
 ###    6.7、HttpServletRequest
  HttpServletRequest代表客户端的请求,用户通过Http协议访问服务器, HTTP请求中的所有信息会被封装到HttpServletRequest,通过这个HttpServletRequest的方法,获得客户端的所有信息;
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200505165609562.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200505165618601.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/azeng233/Image-Bed@master/img/2021-07-09_20-00-29.png)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/azeng233/Image-Bed@master/img/2021-07-09_20-00-45.png)
+
 #### 获取参数,请求转发
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200505165652729.png)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/azeng233/Image-Bed@master/img/2021-07-09_20-01-03.png)
 **自己创建类，且需要继承HttpServlet类**
+
 ```java
 @Override
 protected void doGet(HttpservletRequest req. HttpservletResponse resp) throws ServletException, IOException {
@@ -891,7 +900,7 @@ protected void doGet(HttpservletRequest req. HttpservletResponse resp) throws Se
 	req.getRequestDispatcher("/success.jsp").forward(req,resp);
 }
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200505170535748.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbGxfbG92ZQ==,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/azeng233/Image-Bed@master/img/2021-07-09_20-01-19.png)
 ## 7、Cookie、Session
 
 ### 7.1、会话

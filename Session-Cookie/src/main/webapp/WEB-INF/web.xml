@@ -32,4 +32,37 @@
     <url-pattern>/c3</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>sessionDemo01</servlet-name>
+    <servlet-class>cn.zengchen233.servlet.SessionDemo01</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>sessionDemo01</servlet-name>
+    <url-pattern>/s1</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>sessionDemo02</servlet-name>
+    <servlet-class>cn.zengchen233.servlet.SessionDemo02</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>sessionDemo02</servlet-name>
+    <url-pattern>/s2</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>sessionDemo03</servlet-name>
+    <servlet-class>cn.zengchen233.servlet.SessionDemo03</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>sessionDemo03</servlet-name>
+    <url-pattern>/s3</url-pattern>
+  </servlet-mapping>
+
+<!--  设置session的默认失效时间-->
+  <session-config>
+<!--    十五分钟后session自动失效，分钟为单位-->
+    <session-timeout>15</session-timeout>
+  </session-config>
+
 </web-app>

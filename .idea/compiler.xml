@@ -11,6 +11,7 @@
         <module name="Servlet-01" />
         <module name="Servlet-02" />
         <module name="response" />
+        <module name="Session-Cookie" />
       </profile>
     </annotationProcessing>
   </component>

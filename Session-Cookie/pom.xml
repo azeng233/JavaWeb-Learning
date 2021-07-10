@@ -5,19 +5,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>cn.zengchen233</groupId>
-  <artifactId>Java-web-servlet</artifactId>
+  <artifactId>Session-Cookie</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <modules>
-    <module>Servlet-01</module>
-    <module>Servlet-02</module>
-      <module>response</module>
-    <module>request</module>
-    <module>练习</module>
-      <module>Session-Cookie</module>
-  </modules>
-  <packaging>pom</packaging>
+  <packaging>war</packaging>
 
-  <name>Java-web-servlet Maven Webapp</name>
+  <name>Session-Cookie Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -50,7 +42,7 @@
   </dependencies>
 
   <build>
-    <finalName>Java-web-servlet</finalName>
+    <finalName>Session-Cookie</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <plugin>

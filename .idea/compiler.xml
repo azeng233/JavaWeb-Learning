@@ -8,10 +8,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="request" />
         <module name="练习" />
-        <module name="Servlet-01" />
-        <module name="Servlet-02" />
         <module name="response" />
         <module name="Session-Cookie" />
+        <module name="jsp" />
+        <module name="Servlet-01" />
+        <module name="Servlet-02" />
       </profile>
     </annotationProcessing>
   </component>

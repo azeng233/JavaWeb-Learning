@@ -4,6 +4,11 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          id="WebApp_ID" version="3.1">
   <display-name>Archetype Created Web Application</display-name>
+
+  <context-param>
+    <param-name>url</param-name>
+    <param-value>jdbc:mysql://mysql.zengchen233.cn:3306/广告墙</param-value>
+  </context-param>
   
   <servlet>
     <servlet-name>hello</servlet-name>
@@ -30,6 +35,33 @@
   <servlet-mapping>
     <servlet-name>get</servlet-name>
     <url-pattern>/get</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>s1</servlet-name>
+    <servlet-class>cn.zengchen233.servlet.servletDemo01</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>s1</servlet-name>
+    <url-pattern>/s1</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>s2</servlet-name>
+    <servlet-class>cn.zengchen233.servlet.servletDemo02</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>s2</servlet-name>
+    <url-pattern>/s2</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>getParameter</servlet-name>
+    <servlet-class>cn.zengchen233.servlet.getParameterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>getParameter</servlet-name>
+    <url-pattern>/getp</url-pattern>
   </servlet-mapping>
   
 </web-app>

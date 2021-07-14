@@ -16,5 +16,8 @@
         <module name="Servlet-02" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="LoginDemo" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>

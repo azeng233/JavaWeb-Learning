@@ -5,63 +5,40 @@
          id="WebApp_ID" version="3.1">
   <display-name>Archetype Created Web Application</display-name>
 
-  <context-param>
-    <param-name>url</param-name>
-    <param-value>jdbc:mysql://mysql.zengchen233.cn:3306/广告墙</param-value>
-  </context-param>
-  
   <servlet>
-    <servlet-name>hello</servlet-name>
-    <servlet-class>cn.zengchen233.servlet.HelloServlet</servlet-class>
+    <servlet-name>login</servlet-name>
+    <servlet-class>cn.zengchen233.servlet.LoginServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>hello</servlet-name>
-    <url-pattern>/hello</url-pattern>
+    <servlet-name>login</servlet-name>
+    <url-pattern>/servlet/login</url-pattern>
   </servlet-mapping>
   
   <servlet>
-    <servlet-name>error</servlet-name>
-    <servlet-class>cn.zengchen233.servlet.ErrorServlet</servlet-class>
+    <servlet-name>logout</servlet-name>
+    <servlet-class>cn.zengchen233.servlet.LogoutServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>error</servlet-name>
-    <url-pattern>/error</url-pattern>
+    <servlet-name>logout</servlet-name>
+    <url-pattern>/servlet/logout</url-pattern>
   </servlet-mapping>
 
-  <servlet>
-    <servlet-name>get</servlet-name>
-    <servlet-class>cn.zengchen233.servlet.GetServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>get</servlet-name>
-    <url-pattern>/get</url-pattern>
-  </servlet-mapping>
+  <filter>
+    <filter-name>CharacterEncoding</filter-name>
+    <filter-class>cn.zengchen233.filter.CharacterEncoding</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>CharacterEncoding</filter-name>
+    <url-pattern>/servlet/*</url-pattern>
+  </filter-mapping>
 
-  <servlet>
-    <servlet-name>s1</servlet-name>
-    <servlet-class>cn.zengchen233.servlet.servletDemo01</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>s1</servlet-name>
-    <url-pattern>/s1</url-pattern>
-  </servlet-mapping>
-
-  <servlet>
-    <servlet-name>s2</servlet-name>
-    <servlet-class>cn.zengchen233.servlet.servletDemo02</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>s2</servlet-name>
-    <url-pattern>/s2</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-    <servlet-name>getParameter</servlet-name>
-    <servlet-class>cn.zengchen233.servlet.getParameterServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>getParameter</servlet-name>
-    <url-pattern>/getp</url-pattern>
-  </servlet-mapping>
+  <filter>
+    <filter-name>SysFilter</filter-name>
+    <filter-class>cn.zengchen233.filter.SysFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>SysFilter</filter-name>
+    <url-pattern>/sys/*</url-pattern>
+  </filter-mapping>
   
 </web-app>

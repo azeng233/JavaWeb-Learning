@@ -11,6 +11,7 @@
         <servlet-name>show</servlet-name>
         <url-pattern>/servlet/show</url-pattern>
     </servlet-mapping>
+    
     <filter>
         <filter-name>CharacterEncodingFilter</filter-name>
         <filter-class>cn.zengchen233.filter.CharacterEncodingFilter</filter-class>
@@ -20,5 +21,35 @@
         <url-pattern>/servlet/*</url-pattern>
     </filter-mapping>
 
+    <servlet>
+        <servlet-name>login</servlet-name>
+        <servlet-class>cn.zengchen233.servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>login</servlet-name>
+        <url-pattern>/servlet/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>logout</servlet-name>
+        <servlet-class>cn.zengchen233.servlet.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>logout</servlet-name>
+        <url-pattern>/servlet/logout</url-pattern>
+    </servlet-mapping>
+    
+    <filter>
+        <filter-name>sysFilter</filter-name>
+        <filter-class>cn.zengchen233.filter.SysFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>sysFilter</filter-name>
+        <url-pattern>/sys/*</url-pattern>
+    </filter-mapping>
+
+    <listener>
+        <listener-class>cn.zengchen233.listener.OnlineCountListener</listener-class>
+    </listener>
 
 </web-app>

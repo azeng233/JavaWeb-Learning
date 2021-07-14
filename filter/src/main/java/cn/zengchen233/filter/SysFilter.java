@@ -24,6 +24,6 @@ public class SysFilter implements Filter {
         if (req.getSession().getAttribute("USER_SESSION") == null) {
             resp.sendRedirect("/error.jsp");
         }
-        chain.doFilter(request, response);
+        chain.doFilter(req, resp);
     }
 }

@@ -29,5 +29,9 @@
         <filter-name>SysFilter</filter-name>
         <url-pattern>/sys/*</url-pattern>
     </filter-mapping>
+    
+    <listener>
+        <listener-class>cn.zengchen233.listener.OnlineCountListener</listener-class>
+    </listener>
 
 </web-app>

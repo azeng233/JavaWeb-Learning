@@ -12,12 +12,10 @@
         <module name="response" />
         <module name="Session-Cookie" />
         <module name="jsp" />
+        <module name="LoginDemo" />
         <module name="Servlet-01" />
         <module name="Servlet-02" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="LoginDemo" target="11" />
-    </bytecodeTargetLevel>
   </component>
 </project>

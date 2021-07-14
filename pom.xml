@@ -15,6 +15,7 @@
     <module>练习</module>
       <module>Session-Cookie</module>
       <module>filter</module>
+      <module>LoginDemo</module>
   </modules>
   <packaging>pom</packaging>
 

@@ -12,6 +12,7 @@
         <module name="response" />
         <module name="Session-Cookie" />
         <module name="jsp" />
+        <module name="JDBC" />
         <module name="LoginDemo" />
         <module name="Servlet-01" />
         <module name="Servlet-02" />
